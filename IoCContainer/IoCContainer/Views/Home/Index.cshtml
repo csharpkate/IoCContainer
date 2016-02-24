@@ -1,0 +1,17 @@
+﻿@using System.Web.UI.WebControls
+@using IoCContainer.Models
+@{
+	
+	ViewBag.Title = "Home Page";
+
+}
+
+<div class="jumbotron">
+	<p>Here is a list of "Customers" that are displayed to test that my IoC Container is working.</p><br/>
+	@foreach (Customer c in (List<Customer>) ViewData["customers"])
+	{
+		<div>
+			<h3>@c.Name</h3>
+		</div>
+	}
+</div>
